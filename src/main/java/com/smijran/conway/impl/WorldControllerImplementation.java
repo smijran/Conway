@@ -13,7 +13,7 @@ import java.util.stream.Stream;
  *
  * @author smijran
  */
-public class WorldControllerImplementaiton implements WorldController {
+public class WorldControllerImplementation implements WorldController {
 
     private final static Range<Long> aliveRange = Range.closed(2L, 3L);
 
@@ -34,7 +34,7 @@ public class WorldControllerImplementaiton implements WorldController {
         return world;
     }
 
-    private long countAlive(World state, Coord coord) {
+    private static long countAlive(World state, Coord coord) {
         return Stream.of(Neighbour.values()).map(n -> n.getNeighbour(coord)).filter(state::isAlive).count();
 
     }

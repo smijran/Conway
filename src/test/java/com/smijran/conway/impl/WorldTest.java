@@ -1,7 +1,6 @@
-package com.smijran.conway;
+package com.smijran.conway.impl;
 
-import com.smijran.conway.impl.WorldControllerImplementaiton;
-import com.smijran.conway.impl.WorldImplementation;
+import com.smijran.conway.World;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -17,7 +16,7 @@ public class WorldTest {
         world.setAlive(new BigInteger("1"),new BigInteger("0"));
         world.setAlive(new BigInteger("1"),new BigInteger("1"));
         world.setAlive(new BigInteger("0"),new BigInteger("1"));
-        WorldControllerImplementaiton controller = new WorldControllerImplementaiton();
+        WorldControllerImplementation controller = new WorldControllerImplementation();
 
         //when
         World newWorld = controller.makeProgress(world);
@@ -36,7 +35,7 @@ public class WorldTest {
         world.setAlive(new BigInteger("0"),new BigInteger("0"));
         world.setAlive(new BigInteger("1"),new BigInteger("0"));
         world.setAlive(new BigInteger("5"),new BigInteger("5"));
-        WorldControllerImplementaiton controller = new WorldControllerImplementaiton();
+        WorldControllerImplementation controller = new WorldControllerImplementation();
 
         //when
         World newWorld = controller.makeProgress(world);
@@ -55,7 +54,7 @@ public class WorldTest {
         world.setAlive(new BigInteger("0"),new BigInteger("0"));
         world.setAlive(new BigInteger("1"),new BigInteger("0"));
         world.setAlive(new BigInteger("-1"),new BigInteger("0"));
-        WorldControllerImplementaiton controller = new WorldControllerImplementaiton();
+        WorldControllerImplementation controller = new WorldControllerImplementation();
 
         //when
         World newWorld = controller.makeProgress(world);
@@ -72,7 +71,7 @@ public class WorldTest {
         world.setAlive(new BigInteger("0"),new BigInteger("-1"));
         world.setAlive(new BigInteger("1"),new BigInteger("0"));
         world.setAlive(new BigInteger("-1"),new BigInteger("0"));
-        WorldControllerImplementaiton controller = new WorldControllerImplementaiton();
+        WorldControllerImplementation controller = new WorldControllerImplementation();
 
         //when
         World newWorld = controller.makeProgress(world);
@@ -95,7 +94,7 @@ public class WorldTest {
         world.setAlive(new BigInteger("1"),new BigInteger("1"));
         world.setAlive(new BigInteger("0"),new BigInteger("1"));
         world.setAlive(new BigInteger("-1"),new BigInteger("1"));
-        WorldControllerImplementaiton controller = new WorldControllerImplementaiton();
+        WorldControllerImplementation controller = new WorldControllerImplementation();
 
         //when
         World newWorld = controller.makeProgress(world);

@@ -4,14 +4,14 @@ import com.smijran.conway.World;
 import com.smijran.conway.WorldController;
 import com.smijran.conway.WorldSize;
 import com.smijran.conway.impl.RandomWorldBuilder;
-import com.smijran.conway.impl.WorldControllerImplementaiton;
+import com.smijran.conway.impl.WorldControllerImplementation;
 
 import java.io.IOException;
 import java.math.BigInteger;
 
 public class ConwaySimpleSimulation {
     public static void main(String args[]) throws IOException, InterruptedException {
-        final WorldController controller = new WorldControllerImplementaiton();
+        final WorldController controller = new WorldControllerImplementation();
         World world = new RandomWorldBuilder().create();
         print(world);
         for (int i = 0; i < 100; i++) {
