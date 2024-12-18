@@ -40,7 +40,7 @@ public final class WorldImplementation implements World {
 
     @Override
     public Set<Coord> getAliveCoords() {
-        return table.cellSet().stream().map(c -> Coord.builder().x(c.getColumnKey()).y(c.getRowKey()).build()).collect(Collectors.toSet());
+        return table.cellSet().stream().map(c -> new Coord(c.getColumnKey(), c.getRowKey())).collect(Collectors.toSet());
     }
 
     void setAlive(BigInteger x, BigInteger y) {
@@ -48,7 +48,7 @@ public final class WorldImplementation implements World {
     }
 
     void setAlive(Coord coord) {
-        table.put(coord.getY(), coord.getX(), new Object());
+        table.put(coord.y(), coord.x(), new Object());
     }
 
 

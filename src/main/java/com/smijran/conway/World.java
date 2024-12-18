@@ -31,7 +31,7 @@ public interface World {
      */
     default boolean isAlive(Coord coord)
     {
-        return isAlive(coord.getX(), coord.getY());
+        return isAlive(coord.x(), coord.y());
     }
 
     /**

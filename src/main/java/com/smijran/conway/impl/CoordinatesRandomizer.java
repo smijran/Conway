@@ -15,7 +15,7 @@ final class CoordinatesRandomizer {
     private final Random random = new Random();
 
     Coord getNextCoord() {
-        return Coord.builder().x(BigInteger.valueOf(random.nextLong())).y(BigInteger.valueOf(random.nextLong())).build();
+        return new Coord(BigInteger.valueOf(random.nextLong()), BigInteger.valueOf(random.nextLong()));
     }
 
     Stream<Coord> coords() {
@@ -23,7 +23,7 @@ final class CoordinatesRandomizer {
     }
 
     Coord getNextCoord(long maxX, long maxY) {
-        return Coord.builder().x(BigInteger.valueOf(Math.abs(random.nextLong()) % maxX)).y(BigInteger.valueOf(Math.abs(random.nextLong()) % maxY)).build();
+        return new Coord(BigInteger.valueOf(Math.abs(random.nextLong()) % maxX),BigInteger.valueOf(Math.abs(random.nextLong()) % maxY));
     }
 
     Stream<Coord> coords(long maxX, long maxY) {

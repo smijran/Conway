@@ -58,11 +58,11 @@ public class WorldControllerImplementation implements WorldController {
         }
 
         public Coord getNeighbour(BigInteger x, BigInteger y) {
-            return Coord.builder().x(x.add(shiftX)).y(y.add(shiftY)).build();
+            return new Coord(x.add(shiftX),y.add(shiftY));
         }
 
         public Coord getNeighbour(Coord coord) {
-            return Coord.builder().x(coord.getX().add(shiftX)).y(coord.getY().add(shiftY)).build();
+            return new Coord(coord.x().add(shiftX), coord.y().add(shiftY));
         }
 
     }

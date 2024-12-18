@@ -1,10 +1,5 @@
 package com.smijran.conway;
 
-import lombok.Builder;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.ToString;
-
 import java.math.BigInteger;
 
 /**
@@ -12,13 +7,4 @@ import java.math.BigInteger;
  *
  * @author smijran
  */
-@Builder
-@EqualsAndHashCode
-@ToString
-public final class Coord {
-    @Getter
-    private final BigInteger x;
-    @Getter
-    private final BigInteger y;
-
-}
+public record Coord(BigInteger x, BigInteger y){}

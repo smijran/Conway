@@ -25,8 +25,8 @@ public class ConwaySimpleSimulation {
         final WorldSize size = impl.getSize();
         if (!size.isEmpty()) {
             System.out.println(size);
-            for (BigInteger y = size.getRows().lowerEndpoint(); y.compareTo(size.getRows().upperEndpoint()) < 0; y = y.add(BigInteger.ONE)) {
-                for (BigInteger x = size.getColumns().lowerEndpoint(); x.compareTo(size.getColumns().upperEndpoint()) < 0; x = x.add(BigInteger.ONE)) {
+            for (BigInteger y = size.rows().lowerEndpoint(); y.compareTo(size.rows().upperEndpoint()) < 0; y = y.add(BigInteger.ONE)) {
+                for (BigInteger x = size.columns().lowerEndpoint(); x.compareTo(size.columns().upperEndpoint()) < 0; x = x.add(BigInteger.ONE)) {
                     System.out.print(impl.isAlive(x, y) ? "X" : "-");
                 }
                 System.out.println();
